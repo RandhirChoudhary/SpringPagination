@@ -19,6 +19,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public List<EmployeeEntity> getAllEmployees(Integer pageNo, Integer pageSize, String sortBy) {
 		Pageable paging = PageRequest.of(pageNo, pageSize, Sort.by(sortBy));
+		
+		//Sorting
+		/*Pageable paging = PageRequest.of(pageNo, pageSize, Sort.by("email").ascending()); 
+		 
+		Page<EmployeeEntity> pagedResult = employeeRepository.findAll(paging);*/
+		
 		Page<EmployeeEntity> pagedResult = employeeRepository.findAll(paging);
         
         if(pagedResult.hasContent()) {
