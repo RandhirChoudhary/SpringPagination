@@ -2,7 +2,6 @@ package com.spring.PaginationApplication.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,7 +9,7 @@ import javax.persistence.Table;
 @Table(name = "TBL_EMPLOYEES")
 public class EmployeeEntity {
 	@Id
-	@GeneratedValue
+	//@GeneratedValue
 	private Long id;
 	@Column(name = "first_name")
 	private String firstName;
